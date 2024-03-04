@@ -1,0 +1,138 @@
+:root{
+    --body: #f3f8fe;
+    --orange: #FEC868;
+    --pink: #FF708D;
+    --purple: #DCC1FC;
+    --green: #A3E487;
+    --background: #e7e7e7;
+
+    --hover-pink: #e94e6d;
+    --hover-purple: #ae7deb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--pink);
+    align-items: center;
+}
+
+header {
+    display: flex;
+    background-color: var(--orange);
+    height: 6vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.initial-components {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--body);
+    width: 40%;
+    height: 60vh;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    margin: auto;
+    gap: 10px
+}
+
+.login-inputs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.login-email, .login-password {
+    display: flex;
+    align-items: center;
+    background-color: var(--background);
+    height: 6vh;
+    width: 70%;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.material-symbols-outlined {
+    color: var(--pink);
+    vertical-align: middle;
+}
+
+.input-email, .input-password {
+    background-color: var(--background);
+    border: initial;
+    outline: initial;
+    vertical-align: middle;
+}
+
+.login-btn{
+    color: #000;
+    width: 70%;
+    height: 7vh;
+    background-color: var(--purple);
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+
+.login-btn:hover{
+    background-color: var(--hover-purple);
+    color: #000;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green);
+    height: 6vh;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: var(--pink);
+    }
+
+    .initial-components {
+        width: 80%;
+        height: auto;
+        padding: 20px; 
+    }
+
+    .login-email, .login-password {
+        width: 90%;
+    }
+
+    .login-btn {
+        width: 90%;
+        font-size: 1.2rem;
+        height: 60%; 
+    }
+
+    footer {
+        position: static;
+        text-align: center;
+        font-size: 14px;
+        padding: 1%;
+      }
+}

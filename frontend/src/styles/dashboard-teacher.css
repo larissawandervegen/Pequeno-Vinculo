@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander&family=Noto+Sans+Mono&display=swap');
+
+:root {
+    --body: #f3f8fe;
+    --orange: #FEC868;
+    --pink: rgb(255, 112, 141);
+    --purple: #DCC1FC;
+    --green: hsl(102, 63%, 71%);
+    --background: #e7e7e7;
+
+    --hover-pink: #e94e6d;
+    --hover-purple: #ae7deb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100vh;
+    gap: 2%;
+}
+
+#navbar{
+    padding: 0px;
+}
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    width: 220px;
+    max-height: 50vh;
+    overflow: hidden;
+    transition: all 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#user-pic-text {
+    visibility: hidden;
+}
+
+.sub-menu-wrap.open-menu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    z-index: 100;
+}
+
+.sub-menu {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 20px;
+    z-index: 100;
+    border:0.2vh solid #e4e4e4;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ae7deb;
+    margin: 1vh 0;
+    z-index: 100;
+}
+
+.sub-menu-link p {
+    flex-grow: 1;
+    height: 2vh;
+    z-index: 100;
+}
+
+.sub-menu-link img {
+    width: 5vw;
+    margin-right: 2vw;
+    z-index: 100;
+}
+
+.sub-menu-link span {
+    font-size: 2vh;
+    transition: transform 0.5s;
+    z-index: 100;
+}
+.container-fluid{
+    background-color:#DCC1FC;
+    border-color: 10px solid #DCC1FC;
+
+}
+
+.basic-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 13vh;
+    margin-bottom: 1%;
+}
+
+.basic-info-classes,
+.basic-info-students {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    height: 100%;
+    background-color: var(--background);
+    border-radius: 10px;
+    position: relative;
+}
+
+.basic-info-classes:before,
+.basic-info-students:before,
+.basic-info-guardians:before {
+    content: '';
+    position: absolute;
+    height: 60%;
+    width: 2px;
+    background-color: #bdbdbd;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.basic-info-classes {
+    border-left: 12px solid var(--orange);
+}
+
+.basic-info-students {
+    border-left: 12px solid var(--green);
+}
+
+.classes-icon {
+    font-size: 3rem;
+    color: var(--orange);
+}
+
+.students-icon {
+    font-size: 3rem;
+    color: var(--green);
+}
+
+.summary,
+.summary-last-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 32vh;
+    margin-bottom: 1%;
+}
+
+.summary-best-classes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 41%;
+    height: 100%;
+    background-color: var(--background);
+    border-radius: 20px;
+    position: relative;
+    padding-top: 1%;
+}
+
+.summary-calendar {
+    text-align: center;
+    width: 41%;
+    height: 100%;
+    background-color: var(--background);
+    border-radius: 20px;
+    padding: 1%;
+}
+
+.summary-calendar h5 {
+    color: var(--orange);
+}
+
+.last-info-birthdays,
+.last-info-best-students {
+    display: flex;
+    flex-direction: column;
+    width: 41%;
+    height: 100%;
+    background-color: var(--background);
+    border-radius: 20px;
+    position: relative;
+    padding-top: 1%;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.bests{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 90%;
+}
+
+.best-students{
+    align-self: center;
+    width: 25%;
+    height: 90%;
+    border-radius: 25px;
+    padding-top: 3%;
+}
+
+
+.last-info-birthdays{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 41%;
+    height: 100%;
+    background-color: var(--background);
+    border-radius: 20px;
+    position: relative;
+    padding-top: 1%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.birthdays{
+    align-self: center;
+    width: 90%;
+    margin: 2% 5%;
+    border-radius: 25px;
+    padding: 0% 3%;
+    display: flex;
+    align-items: center;
+    background-color: var(--green);
+    /* overflow-y: auto; */
+}
+
+.birthdays p {
+    margin-bottom: 0px;
+}
+
+
+.bestClasses{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    width: 90%;
+    margin: 0% 2% 0% 5%;
+    gap: 1%;
+}
+
+.bestClasses p {
+    margin: 0px;
+}
+
+.podium {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.podium-place {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.podium-place:nth-child(2) {
+    transform: translateY(-20px);
+}
+
+.podium-place:nth-child(3) {
+    transform: translateY(-40px);
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green);
+    height: 6vh;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    h5 {
+        font-size: 1rem;
+        ;
+    }
+    .sub-menu-link div,
+    #user-pic {
+        display: none;
+    }
+
+    #user-pic-text {
+        visibility: visible;
+    }
+    .basic-info {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .basic-info-classes,
+    .basic-info-students,
+    .basic-info-guardians {
+        width: 88%;
+        margin-bottom: 3%;
+        align-self: center;
+    }
+
+    .basic-info-classes:before,
+    .basic-info-students:before,
+    .basic-info-guardians:before {
+        height: 0px;
+        width: 0px;
+        left: 0;
+    }
+
+    .last-info-best-students {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .best-student-one,
+    .best-student-two,
+    .best-student-three {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        width: 85%;
+        height: 30%;
+        border-radius: 12px;
+    }
+
+    footer {
+        position: static;
+        text-align: center;
+        font-size: 14px;
+        padding: 1%;
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+
+    .sub-menu-link div,
+    #user-pic {
+        display: none;
+    }
+
+    #user-pic-text {
+        visibility: visible;
+    }
+
+}
+
+
